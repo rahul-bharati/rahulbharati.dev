@@ -2,9 +2,14 @@ import styles from "./index.module.scss";
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
+
+  const animation = useAnimation();
+  const [ref, inView, entry] = useInView({ threshold: 0.1 });
 
   const updateThemeMode = () => {
     setDarkMode(!darkMode);
@@ -26,8 +31,34 @@ function Navbar() {
     setDarkMode(isLightModeEnabled);
   }, []);
 
+  useEffect(() => {
+    if (inView) {
+      animation.start("visible");
+    } else {
+      animation.start("hidden");
+    }
+  }, [animation, inView]);
+
+  const variants = {
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.5, delayChilden: 0.2, staggerChildren: 0.1 },
+    },
+    hidden: {
+      y: -10,
+      opacity: 0,
+    },
+  };
+
   return (
-    <div className={styles.navbar}>
+    <motion.div
+      className={styles.navbar}
+      ref={ref}
+      animate={animation}
+      initial="hidden"
+      variants={variants}
+    >
       <div className={styles.brand}>
         <Link href="/">
           <a className={styles.nav_link}>&#128075; Rahul B</a>
@@ -49,7 +80,7 @@ function Navbar() {
           </li>
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
