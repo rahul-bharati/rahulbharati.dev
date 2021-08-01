@@ -1,0 +1,18 @@
+:root {
+  --background-color: #fff;
+  --font-color: #000;
+  --heading-color: #1d80ff;
+  --svg-filter: invert(98%) sepia(62%) saturate(4564%) hue-rotate(179deg)
+    brightness(117%) contrast(89%);
+  --border-color: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] {
+  --background-color: #2c3e50;
+  --font-color: #ecf0f1;
+  --heading-color: #3498db;
+  --nav-color: #fefefe;
+  --svg-filter: invert(21%) sepia(63%) saturate(277%) hue-rotate(168deg)
+    brightness(94%) contrast(95%);
+  --border-color: rgba(236, 240, 241, 0.3);
+}

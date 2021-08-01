@@ -1,0 +1,50 @@
+@import "../../scss/mixins";
+
+.hero {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh 5%;
+  max-width: 1440px;
+  position: relative;
+  overflow: hidden;
+
+  .hero_details_container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 1;
+
+    .heading__container {
+      .heading__name,
+      .heading__about {
+        @include fluid-type(32px, 44px);
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+
+      .heading__name {
+        @include fluid-type(32px, 46px);
+        color: var(--heading-color);
+        font-weight: 600;
+      }
+    }
+  }
+
+  .lottie_container {
+    width: 50%;
+    position: relative;
+    transform: scale(1.3);
+    flex-shrink: 0;
+
+    .lottie__player {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

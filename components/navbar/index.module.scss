@@ -1,0 +1,108 @@
+@import "../../scss/mixins";
+
+.navbar {
+  display: flex;
+  width: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10%;
+
+  @media only screen and (max-width: 756px) {
+    padding: 15px;
+  }
+
+  .nav_link {
+    text-decoration: none;
+    color: var(--nav-color);
+    @include fluid-type(18px, 22px);
+  }
+
+  .link__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    .link__item {
+      .nav_link:hover {
+        transition: all 0.2s;
+        color: var(--heading-color);
+      }
+
+      /* The switch - the box around the slider */
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 25px;
+
+        input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+      }
+
+      /* The slider */
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 35px;
+        width: 35px;
+        left: 0px;
+        bottom: 4px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        box-shadow: 0 0px 15px #2020203d;
+        background: white url("https://i.ibb.co/FxzBYR9/night.png");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .checkbox:checked + .slider {
+        background-color: #2196f3;
+      }
+
+      .checkbox:focus + .slider {
+        box-shadow: 0 0 1px #2196f3;
+      }
+
+      .checkbox:checked + .slider:before {
+        -webkit-transform: translateX(18px);
+        -ms-transform: translateX(18px);
+        transform: translateX(18px);
+        background: white url("https://i.ibb.co/7JfqXxB/sunny.png");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      /* Rounded sliders */
+      .round {
+        border-radius: 34px;
+      }
+
+      .round:before {
+        border-radius: 50%;
+      }
+    }
+
+    .link__item:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}

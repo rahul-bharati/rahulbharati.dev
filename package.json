@@ -1,0 +1,23 @@
+{
+  "name": "rahulbharati.dev",
+  "version": "1.0.0",
+  "description": "Personal Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": "https://github.com/rahul0010/rahulbharati.dev.git",
+  "author": "Rahul Bharati",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@dotlottie/player-component": "^1.0.4",
+    "next": "^11.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.37.0"
+  }
+}

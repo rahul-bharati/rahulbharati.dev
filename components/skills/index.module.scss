@@ -1,0 +1,44 @@
+@import "../../scss/mixins";
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  padding: 5vh 5%;
+  max-width: 920px;
+  position: relative;
+  overflow: hidden;
+
+  .section__heading {
+    @include fluid-type(32px, 46px);
+    color: var(--heading-color);
+    font-weight: 600;
+    text-underline-offset: 10px;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-align: center;
+  }
+
+  .skill_container {
+    margin-top: 35px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+
+    &:nth-child(2) {
+      margin-top: 65px;
+    }
+
+    .skill__heading {
+      @include fluid-type(24px, 32px);
+      font-weight: 400;
+      margin-bottom: 3px;
+    }
+
+    .skill__text {
+      @include fluid-type(16px, 18px);
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+  }
+}
