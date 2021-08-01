@@ -4,11 +4,11 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 100vh;
   padding: 5vh 5%;
   max-width: 920px;
   position: relative;
   overflow: hidden;
+  margin-bottom: 100px;
 
   .section__heading {
     @include fluid-type(32px, 46px);
