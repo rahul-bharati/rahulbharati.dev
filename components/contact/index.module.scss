@@ -58,6 +58,11 @@
     transform: scale(1.3);
     flex-shrink: 0;
 
+    @media only screen and (max-width: 992px) {
+      width: 90%;
+      max-width: 450px;
+    }
+
     .lottie__player {
       width: 100%;
       height: 100%;

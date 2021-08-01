@@ -3,6 +3,11 @@
   list-style: none;
   margin-top: 15%;
 
+  @media only screen and (max-width: 992px) {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
   .socials {
     padding: 5px;
     background: var(--font-color);
