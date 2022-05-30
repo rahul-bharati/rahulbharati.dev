@@ -5,6 +5,7 @@ import About from "../components/about";
 import Skills from "../components/skills";
 import Experience from "../components/experience";
 import Contact from "../components/contact";
+import Projects from "../components/projects";
 
 function HomePage() {
   return (
@@ -14,6 +15,7 @@ function HomePage() {
       <About />
       <Skills />
       <Experience />
+      <Projects />
       <Contact />
     </div>
   );

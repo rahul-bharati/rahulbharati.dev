@@ -53,6 +53,24 @@ function Experience() {
     },
   };
 
+  const detailsVariantDelayed1 = {
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 30,
+        duration: 0.5,
+        delay: 0.6,
+      },
+    },
+    hidden: {
+      x: 1000,
+      opacity: 0,
+    },
+  };
+
   return (
     <motion.div className={styles.skills} ref={viewRef}>
       <h2 className={styles.section__heading}>Experience</h2>
@@ -63,14 +81,20 @@ function Experience() {
         variants={detailsVariant}
       >
         <h3 className={styles.skill__heading}>
-          Web Developer - Paper Boat Apps (October 2019 - Present)
+          Web Developer - Rapidera Technologies (February 2019 - Present)
         </h3>
         <span className={styles.skill__text}>
-          Paper Boat Apps is an tech-ed based game(kiddopia) development
-          company. Here, I'm responsible for development and maintaining
-          kiddopia website and also creation of internal analytics dashboard for
-          marketing purposes. I've being using cloud functions for serverless
-          computing and node/express stack for websites.
+          <ul>
+            <li>
+              Collaborate with other developers to write efficient,
+              well-designed code
+            </li>
+            <li>
+              Participate in code review and scrum meetups to keep up with
+              changes and tasks
+            </li>
+            <li>Work as a third-party developer for HDFC life</li>
+          </ul>
         </span>
       </motion.div>
       <motion.div
@@ -80,14 +104,45 @@ function Experience() {
         variants={detailsVariantDelayed}
       >
         <h3 className={styles.skill__heading}>
+          Web Developer - Paper Boat Apps (October 2019 - February 2022)
+        </h3>
+        <span className={styles.skill__text}>
+          <ul>
+            <li>
+              Collaborate with designers and other developers to launch web
+              applications
+            </li>
+            <li>
+              Write efficient, well-designed code and maintain software
+              documentation
+            </li>
+            <li>
+              Built Kiddopia website to provide a subscription to the user
+            </li>
+            <li>
+              Worked on serverless applications using Google cloud functions
+            </li>
+          </ul>
+        </span>
+      </motion.div>
+      <motion.div
+        className={styles.skill_container}
+        animate={detailsAnimation}
+        initial="hidden"
+        variants={detailsVariantDelayed1}
+      >
+        <h3 className={styles.skill__heading}>
           Web Developer - Appic Mobile (July 2019 - October 2019)
         </h3>
         <span className={styles.skill__text}>
-          Appic mobile is brand for Ibinder Digital private Limited which is a
-          service company that provides services like designing and development
-          for web/mobile applications using laravel framework for Fintech
-          startups. Here, I was responsible for development for apis and
-          websites for same. I have worked on mintoak, papervideo and finwego.
+          <ul>
+            <li>Developed website components using modern frameworks</li>
+            <li>Participated in code reviews with development teams</li>
+            <li>
+              Worked on multiple fintech websites backend including mintoak and
+              finwego
+            </li>
+          </ul>
         </span>
       </motion.div>
     </motion.div>

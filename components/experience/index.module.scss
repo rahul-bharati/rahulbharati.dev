@@ -39,6 +39,14 @@
       @include fluid-type(16px, 18px);
       font-weight: 400;
       letter-spacing: 1px;
+
+      ul {
+        list-style-type: " -> ";
+        list-style-position: inside;
+        li {
+          margin-bottom: 5px;
+        }
+      }
     }
   }
 }
