@@ -81,7 +81,7 @@ function Experience() {
         variants={detailsVariant}
       >
         <h3 className={styles.skill__heading}>
-          Web Developer - Rapidera Technologies (February 2019 - Present)
+          Web Developer - Rapidera Technologies (February 202022 - Present)
         </h3>
         <span className={styles.skill__text}>
           <ul>
